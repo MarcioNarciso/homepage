@@ -1,0 +1,115 @@
+#header {
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--body-color);
+    box-shadow: 0 10px 20px black;
+    opacity: 0;
+    z-index: 3;
+}
+
+#header.show {
+    opacity: 1;
+    transition: opacity 1s ease .7s;
+}
+
+#header nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header nav .my-logo {
+    height: 100%;
+}
+
+#header nav .my-logo img{
+    width: auto;
+    height: 100%;
+}
+
+/* Ícone do Menu */
+#header nav .toggle,
+#header nav .toggle:active {
+    outline: none;
+    text-decoration: none;
+}
+
+#header nav .toggle {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+/* Lista de menus */
+#header nav .menu ul li {
+    text-align: center;
+}
+
+#header nav .menu ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+    transition: .3s;
+}
+
+#header nav .menu ul li a:hover,
+#header nav .menu ul li a.active {
+    color: var(--base-color);
+}
+
+/* Criando a barra de sublinhado */
+#header nav .menu ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--base-color);
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    transition: width .2s;
+}
+
+#header nav .menu ul li a:hover::after,
+#header nav .menu ul li a.active::after {
+    width: 100%;
+}
+
+/* Esconde o menu mobile */
+#header nav .menu {
+    opacity: 0;
+    position: fixed;
+    top: -100vh;
+    transform: .2s;
+}
+
+/*
+Exibe o menu aberto no mobile.
+*/
+/*#header .menu.show {*/
+#header #menu_mobile.menu:target{
+    opacity: 1;
+    background-color: var(--body-color);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+}
+
+/* Icone de fechar o menu mobile */
+#header .btn-close-menu {
+    position: absolute;
+    top: -1.5rem;
+    right: 1.5rem;
+    transition: top .2s;
+    visibility: hidden;
+}
+
+#header #menu_mobile.menu:target .btn-close-menu {
+    visibility: visible;
+    top: 1rem;
+}

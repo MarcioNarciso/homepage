@@ -1,0 +1,66 @@
+#home {
+    width: 100vw;
+    height: 100vh;
+    letter-spacing: .2rem;
+}
+
+#home .container {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#home .image {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home .image img {
+    filter: drop-shadow(0 20px 25px black);
+}
+
+#home .text {
+    width: 100%;
+    text-align: center;
+    letter-spacing: normal;
+    font-weight: normal;
+}
+
+#home .text > *:not(.loading-msg) {
+    opacity: 0;
+    display: none;
+}
+
+#home .text > *:not(.loading-msg).show {
+    opacity: 1;
+    display: block;
+    transition: opacity 1s ease .7s;
+}
+
+#home p {
+    font-size: 2rem;
+}
+
+#home .loading-msg {   
+    letter-spacing: .5rem;
+    animation: piscar 1.5s linear infinite;
+    font-weight: 500;
+}
+
+@keyframes piscar {
+    50% {
+        opacity: 0;
+    }
+}
+
+#home .my-name {
+    font-weight: 400;
+}
+
+#home .my-name span{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    display: block;
+}

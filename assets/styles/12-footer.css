@@ -1,0 +1,17 @@
+footer {
+    font-weight: 500;
+}
+
+footer.section {
+    background: var(--base-color) !important;
+    padding: 4rem 0;
+} 
+
+footer .grid {
+    gap: 1rem;
+}
+
+footer .my-logo {
+    width: 10rem;
+}
+

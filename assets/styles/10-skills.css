@@ -1,0 +1,19 @@
+#skills .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+}
+
+#skills .cards .card {
+    width: 5rem;
+    height: 5rem;
+    line-height: 4.5rem;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, .3);
+    text-align: center;
+}
+
+#skills .cards .card i{
+    display: inline;
+    vertical-align: middle;
+    font-size: 3rem;
+}

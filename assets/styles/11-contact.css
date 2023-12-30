@@ -1,0 +1,15 @@
+#contact .container {
+    gap: 4rem;
+}
+
+#contact .infos ul li {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+#contact .infos ul li i[class|="icon"]{
+    font-size: 1.5rem;
+    color: var(--base-color);
+    margin-right: 1rem;
+}

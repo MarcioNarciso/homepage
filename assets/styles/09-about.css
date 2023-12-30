@@ -1,0 +1,45 @@
+#about {
+    width: 100vw;
+}
+
+#about header {
+    margin: auto 1.5rem 0 1.5rem;
+}
+
+#about .social-media-wrapper  {
+    padding: 2rem;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, .3);
+    border-radius: .25rem;
+}
+
+#about .social-media-wrapper .logo figure{
+    max-width: 10rem;
+    margin: 0 auto;
+}
+
+#about .social-media-wrapper .logo figcaption {
+    text-align: right;
+}
+
+#about .social-media-wrapper .logo figcaption a{
+    text-decoration: none;
+    color: var(--text-color-light);
+    font-size: .7rem;
+}
+
+#about .social-media-wrapper .description {
+    padding: .5rem;
+}
+
+#about .swiper-slide {
+    height: auto;
+    padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet {
+    background: var(--text-color-light);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--text-color);
+}

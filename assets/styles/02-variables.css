@@ -1,0 +1,18 @@
+:root{
+    --text-color: #fff;
+    --text-color-light: hsl(0, 0%, 60%);
+
+    --hue : 209;
+
+    --base-color: hsl(var(--hue), 65%, 55%);
+    --base-color-alt: hsl(var(--hue), 65%, 35%);
+    --body-color: hsl(0, 0%, 10%);
+
+    --header-height: 4rem;
+
+    --title-font-size: 2rem;
+    --subtitle-font-size: 1rem;
+
+    --title-font: 'Rubik Mono One', monospace;
+    --body-font: 'Montserrat', sans-serif;
+}

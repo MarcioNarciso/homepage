@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+body {
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    background-attachment: fixed;
+
+    color: var(--text-color);
+    font-family: var(--body-font);
+
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+}
+
+.title {
+    font: 700 var(--title-font-size) var(--title-font);
+}
+
+.subtitle {
+    font: 400 var(--subtitle-font-size) var(--body-font);
+}
+
+.divider {
+    border: 2px solid black;
+}
+
+.button {
+    text-decoration: none;
+    color: var(--text-color);
+    background: var(--base-color);
+    padding: 1rem .5rem;
+    text-align: center;
+}
+
+.button:hover {
+    background: var(--base-color-alt);
+}
+
+.back-to-top {
+    clip-path: circle();
+    background: var(--base-color-alt);
+    color: var(--text-color);
+    font-size: 2rem;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    padding: .5rem;
+    outline: none;
+    text-decoration: none;
+    visibility: hidden;
+    z-index: 10;
+
+    transform: translateY(200%);
+    transition: .3s;
+}
+
+.back-to-top.show {
+    bottom: 1.5rem;
+    visibility: visible;
+    transform: translateY(0);
+} 
