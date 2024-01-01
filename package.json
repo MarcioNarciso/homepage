@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1"
+    "clean-webpack-plugin": "^4.0.0",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "terser": "^5.26.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.89.0"
   }
 }

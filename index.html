@@ -13,30 +13,26 @@
     <!-- Icones -->
     <link rel="stylesheet" href="assets/icons/style.css">
 
-    <link rel="stylesheet" href="assets/dist/css/style.css">
-    
-    <!--
-    <link rel="stylesheet" href="assets/styles/reset.css">
-    <link rel="stylesheet" href="assets/styles/variables.css">
-    <link rel="stylesheet" href="assets/styles/debug.css">
-    <link rel="stylesheet" href="assets/styles/util.css">
-    <link rel="stylesheet" href="assets/styles/base.css">
-    <link rel="stylesheet" href="assets/styles/layout.css">
-    <link rel="stylesheet" href="assets/styles/navigation.css">
-    <link rel="stylesheet" href="assets/styles/home.css">
-    <link rel="stylesheet" href="assets/styles/about.css">
-    <link rel="stylesheet" href="assets/styles/skills.css">
-    <link rel="stylesheet" href="assets/styles/contact.css">
-    <link rel="stylesheet" href="assets/styles/footer.css">
-    -->
+    <!-- <link rel="stylesheet" href="assets/dist/css/style.css"> -->
+
+    <link rel="stylesheet" href="assets/styles/01-reset.css">
+    <link rel="stylesheet" href="assets/styles/02-variables.css">
+    <link rel="stylesheet" href="assets/styles/03-debug.css">
+    <link rel="stylesheet" href="assets/styles/04-util.css">
+    <link rel="stylesheet" href="assets/styles/05-base.css">
+    <link rel="stylesheet" href="assets/styles/06-layout.css">
+    <link rel="stylesheet" href="assets/styles/07-navigation.css">
+    <link rel="stylesheet" href="assets/styles/08-home.css">
+    <link rel="stylesheet" href="assets/styles/09-about.css">
+    <link rel="stylesheet" href="assets/styles/10-skills.css">
+    <link rel="stylesheet" href="assets/styles/11-contact.css">
+    <link rel="stylesheet" href="assets/styles/12-footer.css">
 
 </head>
 
 <body>
 
-
     <main>
-
         <!-- Home -->
         <section id="home" class="section">
             <div class="container">
@@ -53,6 +49,11 @@
                     </h1>
                 </div>
             </div>
+
+            <a href="#about" class="go-to-next-section" title="Próxima seção">
+                <i class="icon-chevron-down"></i>
+                <i class="icon-chevron-down"></i>
+            </a>
         </section>
 
         <!-- About -->
@@ -196,21 +197,21 @@
                 </a>
             </div>
 
-            <div class="menu" id="menu_mobile">
+            <div class="menu">
                 <!-- Close Menu -->
-                <a class="toggle btn-close-menu" href="#home">
+                <a class="toggle btn-close-menu close-menu" href="javascript:closeMenu()">
                     <i class="icon-close"></i>
                 </a>
                 <ul class="grid">
-                    <li><a href="#home" class="title">Home</a></li>
-                    <li><a href="#about" class="title">Sobre</a></li>
-                    <li><a href="#skills" class="title">Habilidades</a></li>
-                    <li><a href="#contact" class="title">Contato</a></li>
+                    <li><a href="#home" class="title close-menu">Home</a></li>
+                    <li><a href="#about" class="title close-menu">Sobre</a></li>
+                    <li><a href="#skills" class="title close-menu">Habilidades</a></li>
+                    <li><a href="#contact" class="title close-menu">Contato</a></li>
                 </ul>
             </div>
 
             <!-- Open Menu -->
-            <a class="toggle" href="#menu_mobile">
+            <a class="toggle" href="javascript:openMenu()">
                 <i class="icon-menu"></i>
             </a>
 
@@ -225,7 +226,7 @@
                 </a>
             </div>
             <p>Todos os direitos reservados.</p>
-            <p>&copy; Márcio Narciso Dutra</p>
+            <p>Desenvolvido por Márcio Narciso Dutra</p>
         </div>
     </footer>
 

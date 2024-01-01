@@ -7,7 +7,7 @@
     background: var(--body-color);
     box-shadow: 0 10px 20px black;
     opacity: 0;
-    z-index: 3;
+    z-index: 20;
 }
 
 #header.show {
@@ -38,6 +38,15 @@
     text-decoration: none;
 }
 
+/* Icone de fechar o menu mobile */
+#header .btn-close-menu {
+    position: absolute;
+    top: -1.5rem;
+    right: 1.5rem;
+    transition: top .2s;
+    visibility: hidden;
+}
+
 #header nav .toggle {
     font-size: 2rem;
     color: var(--text-color);
@@ -60,7 +69,7 @@
     color: var(--base-color);
 }
 
-/* Criando a barra de sublinhado */
+/* Criando a barra de "sublinhado" */
 #header nav .menu ul li a::after {
     content: '';
     width: 0;
@@ -79,6 +88,7 @@
 
 /* Esconde o menu mobile */
 #header nav .menu {
+    background-color: var(--body-color);
     opacity: 0;
     position: fixed;
     top: -100vh;
@@ -88,10 +98,8 @@
 /*
 Exibe o menu aberto no mobile.
 */
-/*#header .menu.show {*/
-#header #menu_mobile.menu:target{
+#header nav .menu.show {
     opacity: 1;
-    background-color: var(--body-color);
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -100,16 +108,8 @@ Exibe o menu aberto no mobile.
     place-content: center;
 }
 
-/* Icone de fechar o menu mobile */
-#header .btn-close-menu {
-    position: absolute;
-    top: -1.5rem;
-    right: 1.5rem;
-    transition: top .2s;
-    visibility: hidden;
-}
 
-#header #menu_mobile.menu:target .btn-close-menu {
+#header nav .menu.show .btn-close-menu {
     visibility: visible;
     top: 1rem;
 }

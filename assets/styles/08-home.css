@@ -2,6 +2,7 @@
     width: 100vw;
     height: 100vh;
     letter-spacing: .2rem;
+    position: relative;
 }
 
 #home .container {
@@ -22,27 +23,27 @@
 
 #home .text {
     width: 100%;
+    height: 3rem;
     text-align: center;
     letter-spacing: normal;
     font-weight: normal;
 }
 
-#home .text > *:not(.loading-msg) {
+#home .text > *{
+    font-size: 1rem;
     opacity: 0;
-    display: none;
+    visibility: hidden;
+    transition: opacity 1s ease .7s;
 }
 
 #home .text > *:not(.loading-msg).show {
     opacity: 1;
-    display: block;
-    transition: opacity 1s ease .7s;
+    visibility: visible;
 }
 
-#home p {
-    font-size: 2rem;
-}
-
-#home .loading-msg {   
+#home .text .loading-msg {   
+    opacity: 1;
+    visibility: visible;
     letter-spacing: .5rem;
     animation: piscar 1.5s linear infinite;
     font-weight: 500;
@@ -54,13 +55,70 @@
     }
 }
 
+#home .welcome-msg {
+    font-size: 1.5rem;
+}
+
 #home .my-name {
     font-weight: 400;
 }
 
 #home .my-name span{
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 500;
     letter-spacing: .2rem;
     display: block;
+}
+
+.go-to-next-section {
+    color: var(--text-color);
+    font-size: 2rem;
+    outline: none;
+    text-decoration: none;
+    width: 3rem;
+    height: 4rem;
+    
+    /* Alinha as duas setas entre si */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Alinha as duas setas no centro da página */
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Efeito FadeIn */
+    opacity: 0;
+    visibility: hidden; /* Remove eventos de mouse */
+    transition: bottom 1s ease .7s, opacity 1s ease .7s;
+}
+
+.go-to-next-section.show {
+    opacity: 1;
+    visibility: visible;
+    bottom: 1rem;
+}
+
+/* Efeito Zoom On */
+.go-to-next-section:hover {
+    transform: scale(1.2) translateX(-42%)
+}
+
+.go-to-next-section * {
+    pointer-events: none;
+}
+
+/* Estiliza as setas */
+
+.go-to-next-section :first-child {
+    font-size: 2.5rem;
+    transform: translateY(25%);
+}
+
+.go-to-next-section :nth-child(2) {
+    font-size: 3.5rem;
+    transform: translateY(-25%);
 }

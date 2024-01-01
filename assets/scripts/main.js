@@ -9,13 +9,34 @@ const swiper = new Swiper('.swiper', {
     keyboard: true
 });
 
+const menuMobile = document.querySelector("#header .menu");
+
+function openMenu() {
+    menuMobile.classList.add('show');
+}
+
+function closeMenu() {
+    menuMobile.classList.remove('show');
+}
+
 function backToTop() {
     const backToTopButton = document.querySelector(".back-to-top");
 
-    if (window.scrollY >= 300) {
+    if (window.scrollY >= 300) { 
         backToTopButton.classList.add("show");
     } else {
         backToTopButton.classList.remove("show");
+    } 
+}
+
+function goToNextSection() {
+    const goToNextSectionBtn = document.querySelector('.go-to-next-section');
+
+    if (window.scrollY >= 600) {
+        goToNextSectionBtn.classList.remove('show');
+    } else {
+        goToNextSectionBtn.classList.add('show');
+
     }
 }
 
@@ -25,10 +46,12 @@ function showInterface() {
     const body = document.querySelector('body');
     const header = document.querySelector('#header');
     const sections = document.querySelectorAll('.section:not(#home)');
+    const goToNextSectionBtn = document.querySelector('.go-to-next-section');
 
     loadingMsg.style.display = 'none';
     welcomeMsg.classList.add('show');
     header.classList.add('show');
+    goToNextSectionBtn.classList.add('show');
     body.style.overflow = 'auto';
 
     for (const section of sections) {
@@ -70,6 +93,12 @@ window.onload = (event) => {
 
     window.onscroll = () => {
         backToTop();
+        goToNextSection();
     };
+
+    const buttons = document.querySelectorAll(".close-menu");
+    for(const button of buttons) {
+        button.addEventListener('click', closeMenu);
+    }
 }
 

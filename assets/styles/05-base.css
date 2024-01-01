@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background:
         radial-gradient(black 15%, transparent 16%) 0 0,
@@ -67,4 +71,4 @@ main {
     bottom: 1.5rem;
     visibility: visible;
     transform: translateY(0);
-} 
+}
