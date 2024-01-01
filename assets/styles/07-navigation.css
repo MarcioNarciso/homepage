@@ -90,6 +90,7 @@
 #header nav .menu {
     background-color: var(--body-color);
     opacity: 0;
+    visibility: hidden;
     position: fixed;
     top: -100vh;
     transform: .2s;
@@ -112,4 +113,33 @@ Exibe o menu aberto no mobile.
 #header nav .menu.show .btn-close-menu {
     visibility: visible;
     top: 1rem;
+}
+
+@media (min-width: 992px) {
+    /* Esconde os botões relacionados ao menu mobile */
+    #header nav .toggle {
+        display: none;
+    }
+
+    /* Posiciona o menu no local correto */
+    #header nav .menu {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+    }
+
+    /* Coloca o menu em linha */
+    #header nav .menu ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    #header nav .menu ul li a.title {
+        font: 400 1rem var(--body-font);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    #header nav .menu ul li a.active {
+        font-weight: 700;
+    }
 }

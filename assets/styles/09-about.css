@@ -43,3 +43,41 @@
 .swiper-pagination-bullet-active {
     background: var(--text-color);
 }
+
+@media (min-width: 768px) {
+    #about .social-media-wrapper.grid {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #about .social-media-wrapper.grid .logo {
+        grid-area: 1 / 1 / span 2 / span 1;
+    }
+
+    #about .social-media-wrapper.grid .button {
+        grid-area: 2 / 2;
+        width: 70%;
+        height: fit-content;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 992px) {
+    #about .container {
+        text-align: center;
+    }
+
+    #about .social-media-wrapper.grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        min-height: 27rem;    
+    }
+
+    #about .social-media-wrapper.grid .logo {
+        grid-area: auto;
+    }
+
+    #about .social-media-wrapper.grid .button {
+        grid-area: auto;
+    }
+}

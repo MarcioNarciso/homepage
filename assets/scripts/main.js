@@ -6,7 +6,13 @@ const swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination'
     },
-    keyboard: true
+    keyboard: true,
+    breakpoints: {
+        992: {
+            slidesPerView: 2,
+            setWrapperSize: true
+        }
+    }
 });
 
 const menuMobile = document.querySelector("#header .menu");
@@ -85,6 +91,40 @@ function showMyName() {
     }, 4000);
 }
 
+/**
+ * Ativa o menu conforme a seção visível na página.
+ */
+function activeMenuAtCurrentSection() {
+    const sections = document.querySelectorAll("main section[id]");
+    const userViewingArea = window.pageYOffset + (window.innerHeight / 8) * 4;
+    let sectionPositionStart = 0;
+    let sectionPositionEnd = 0;
+    let sectionId = null;
+    let isSectionStartInsideView = false;
+    let isSectionEndInsideView = false;
+    let isUserSeeing = false;
+    let sectionMenu = null;
+
+    for(const section of sections) {
+        sectionPositionStart = section.offsetTop;
+        sectionPositionEnd = sectionPositionStart + section.offsetHeight;
+        sectionId = section.getAttribute('id');
+
+        isSectionStartInsideView = userViewingArea >= sectionPositionStart;
+        isSectionEndInsideView = userViewingArea <= sectionPositionEnd;
+
+        isUserSeeing = isSectionStartInsideView && isSectionEndInsideView;
+
+        sectionMenu = document.querySelector('#header nav ul li a[href*="'+sectionId+'"]');
+
+        if (isUserSeeing) {
+            sectionMenu.classList.add('active');
+        } else {
+            sectionMenu.classList.remove('active');
+        }
+    }
+}
+
 window.onload = (event) => {
     /**
      * Exibe todas seções quando a página está totalmente carregada.
@@ -94,8 +134,12 @@ window.onload = (event) => {
     window.onscroll = () => {
         backToTop();
         goToNextSection();
+        activeMenuAtCurrentSection();
     };
 
+    /**
+     * Fechamento do menu mobile ao clicar nos menus.
+     */
     const buttons = document.querySelectorAll(".close-menu");
     for(const button of buttons) {
         button.addEventListener('click', closeMenu);

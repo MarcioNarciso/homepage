@@ -17,3 +17,10 @@
     vertical-align: middle;
     font-size: 3rem;
 }
+
+@media (min-width: 992px) {
+    #skills .grid {
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+}

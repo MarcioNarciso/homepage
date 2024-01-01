@@ -3,13 +3,18 @@
     height: 100vh;
     letter-spacing: .2rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+/*
 #home .container {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
 }
+*/
 
 #home .image {
     max-width: 700px;
