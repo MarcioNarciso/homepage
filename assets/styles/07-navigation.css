@@ -101,6 +101,7 @@ Exibe o menu aberto no mobile.
 */
 #header nav .menu.show {
     opacity: 1;
+    visibility: visible;
     height: 100vh;
     width: 100vw;
     top: 0;
