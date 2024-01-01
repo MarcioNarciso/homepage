@@ -8,16 +8,8 @@
     justify-content: center;
 }
 
-/*
-#home .container {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-}
-*/
-
 #home .image {
-    max-width: 700px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
