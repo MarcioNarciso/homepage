@@ -16,3 +16,10 @@
     --title-font: 'Rubik Mono One', monospace;
     --body-font: 'Montserrat', sans-serif;
 }
+
+@media (min-width: 768px) {
+    :root {
+        --title-font-size: 3rem;
+        --subtitle-font-size: 1.5rem;
+    }
+}

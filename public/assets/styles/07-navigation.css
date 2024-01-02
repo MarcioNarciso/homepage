@@ -61,7 +61,7 @@
     text-decoration: none;
     color: var(--text-color);
     position: relative;
-    transition: .3s;
+    transition: color .3s;
 }
 
 #header nav .menu ul li a:hover,
@@ -93,7 +93,6 @@
     visibility: hidden;
     position: fixed;
     top: -100vh;
-    transform: .2s;
 }
 
 /*

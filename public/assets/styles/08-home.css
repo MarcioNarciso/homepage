@@ -119,3 +119,17 @@
     font-size: 3.5rem;
     transform: translateY(-25%);
 }
+
+@media (min-width: 768px) {
+    #home .text > *{
+        font-size: 2rem;
+    }
+
+    #home .welcome-msg {
+        font-size: 2.5rem;
+    }
+
+    #home .my-name span{
+        font-size: 3rem;
+    }
+}

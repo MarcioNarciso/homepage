@@ -131,6 +131,9 @@ window.onload = (event) => {
      */
     showInterface();
 
+    /**
+     * Evento de quando a página é rolada.
+     */
     window.onscroll = () => {
         backToTop();
         goToNextSection();
