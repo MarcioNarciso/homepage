@@ -48,15 +48,50 @@ a:hover {
 }
 
 .button {
+    display: block;
     text-decoration: none;
     color: var(--text-color);
     background: var(--base-color);
     padding: 1rem .5rem;
-    text-align: center;
+    position: relative;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    z-index: 0;
+    transition: width .5s ease;
+    /* Usado para cobrir todo elemento quando width for aplicado */
+    top: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .button:hover {
+    font-weight: 700;
+}
+
+.button:hover::before,
+.button:active::before {
     background: var(--base-color-alt);
+    width: 100%;
+}
+
+.button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button i[class*="icon"] {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.button > * {
+    position: relative;
+    z-index: 5;
 }
 
 .back-to-top {

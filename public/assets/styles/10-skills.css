@@ -12,15 +12,32 @@
     text-align: center;
 }
 
+#skills .cards .card:hover,
+#skills .cards .card:active {
+    color: var(--base-color);
+}
+
 #skills .cards .card i{
     display: inline;
     vertical-align: middle;
     font-size: 3rem;
 }
 
+@media (min-width: 768px) {
+    #skills .button {
+        margin: 2rem auto;
+        max-width: 25rem;
+    }
+}
+
 @media (min-width: 992px) {
     #skills .grid {
         grid-template-columns: 1fr 2fr;
         align-items: center;
+    }
+
+    #skills .button {
+        margin: 2rem auto;
+        max-width: 100%;
     }
 }

@@ -18,6 +18,10 @@
     margin-bottom: 1rem;
 }
 
+.section .subtitle {
+    margin-bottom: 1rem;
+}
+
 .container {
     margin: 0 1.5rem;
     width: calc(100% - 3rem);

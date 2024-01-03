@@ -6,6 +6,10 @@
     margin: auto 1.5rem 0 1.5rem;
 }
 
+#about header p {
+    margin-bottom: 1rem;
+}
+
 #about .social-media-wrapper  {
     padding: 2rem;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, .3);
