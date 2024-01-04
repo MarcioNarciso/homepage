@@ -67,6 +67,10 @@
 }
 
 @media (min-width: 992px) {
+    #about.section {
+        padding-top: 4.5rem;
+    }
+
     #about .container {
         text-align: center;
     }

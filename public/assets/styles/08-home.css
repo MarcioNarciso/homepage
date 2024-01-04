@@ -121,6 +121,10 @@
 }
 
 @media (min-width: 768px) {
+    #home {
+        height: 75vh;
+    }
+
     #home .text > *{
         font-size: 2rem;
     }
@@ -131,5 +135,11 @@
 
     #home .my-name span{
         font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .go-to-next-section {
+        display: none;
     }
 }
