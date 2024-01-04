@@ -1,3 +1,29 @@
+window.onload = (event) => {
+    /**
+     * Exibe todas seções quando a página está totalmente carregada.
+     */
+    showInterface();
+
+    /**
+     * Fechamento do menu mobile ao clicar nos menus.
+     */
+    initMenuButtons();
+
+    /**
+     * Habilita o toque nos cards das skills
+     */
+    initSkillsCards();
+
+    /**
+     * Evento de quando a página é rolada.
+     */
+    window.onscroll = () => {
+        backToTop();
+        goToNextSection();
+        activeMenuAtCurrentSection();
+    };
+}
+
 /**
  * Slider das redes sociais.
  */
@@ -43,6 +69,22 @@ function goToNextSection() {
     } else {
         goToNextSectionBtn.classList.add('show');
 
+    }
+}
+
+function initMenuButtons() {
+    const buttons = document.querySelectorAll(".close-menu");
+    for(const button of buttons) {
+        button.addEventListener('click', closeMenu);
+    }
+}
+
+function initSkillsCards() {
+    const flipperCards = document.getElementsByClassName("card flipper");
+    for (const flipper of flipperCards) {
+        flipper.addEventListener('touchstart', (e) => {
+            flipper.classList.toggle('flip');
+        });
     }
 }
 
@@ -122,30 +164,6 @@ function activeMenuAtCurrentSection() {
         } else {
             sectionMenu.classList.remove('active');
         }
-    }
-}
-
-window.onload = (event) => {
-    /**
-     * Exibe todas seções quando a página está totalmente carregada.
-     */
-    showInterface();
-
-    /**
-     * Evento de quando a página é rolada.
-     */
-    window.onscroll = () => {
-        backToTop();
-        goToNextSection();
-        activeMenuAtCurrentSection();
-    };
-
-    /**
-     * Fechamento do menu mobile ao clicar nos menus.
-     */
-    const buttons = document.querySelectorAll(".close-menu");
-    for(const button of buttons) {
-        button.addEventListener('click', closeMenu);
     }
 }
 

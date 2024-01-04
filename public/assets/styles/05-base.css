@@ -25,6 +25,7 @@ main {
     width: 100%;
 }
 
+/* Estilizando links */
 a {
     text-decoration: none;
     color: var(--text-color);
@@ -34,6 +35,7 @@ a {
 a:hover {
     font-weight: 900;
 }
+/* FIM - Estilizando links */
 
 .title {
     font: 700 var(--title-font-size) var(--title-font);
@@ -47,6 +49,7 @@ a:hover {
     border: 2px solid black;
 }
 
+/* Estilizando Botões */
 .button {
     display: block;
     text-decoration: none;
@@ -93,6 +96,7 @@ a:hover {
     position: relative;
     z-index: 5;
 }
+/* FIM - Estilizando Botões */
 
 .back-to-top {
     clip-path: circle();
@@ -117,3 +121,43 @@ a:hover {
     visibility: visible;
     transform: translateY(0);
 }
+
+/* ### Estilizando efeito de flip ### */
+
+
+/* define a velocidade da animação */
+.flipper {
+    position: relative;
+}
+
+/* Vira os container frente e verso quando o mouse passa em cima */
+.flipper:hover .back, .flipper.flip .back { transform: rotateY(0deg); }
+.flipper:hover .front, .flipper.flip .front { transform: rotateY(180deg); }
+
+.flipper, .front, .back {
+    width: 100%;
+    height: 100%;
+}
+
+.front, .back {
+    /* esconde o verso durante a animação */
+    backface-visibility: hidden;
+    transition: .6s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Frente posicionada sobre o fundo */
+.front {
+    z-index: 2;
+    transform: rotateY(0);
+}
+
+/* verso inicialmente escondido */
+.back {
+    transform: rotateY(-180deg);
+}
+
+/* ### FIM - Estilizando efeito de flip ### */

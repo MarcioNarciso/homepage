@@ -7,20 +7,24 @@
 #skills .cards .card {
     width: 5rem;
     height: 5rem;
-    line-height: 4.5rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
     text-align: center;
 }
 
-#skills .cards .card:hover,
-#skills .cards .card:active {
-    color: var(--base-color);
+#skills .cards .card i{
+    font-size: 3rem;
 }
 
-#skills .cards .card i{
-    display: inline;
-    vertical-align: middle;
-    font-size: 3rem;
+#skills .cards .card .back{
+    font-weight: 700;
+    font-size: .8rem;
+    color: var(--base-color-light);
+}
+
+#skills .cards .card * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {

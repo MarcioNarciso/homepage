@@ -2,10 +2,11 @@
     --text-color: #fff;
     --text-color-light: hsl(0, 0%, 60%);
 
-    --hue : 209;
+    --hue : 210;
 
     --base-color: hsl(var(--hue), 65%, 55%);
     --base-color-alt: hsl(var(--hue), 65%, 35%);
+    --base-color-light: hsl(var(--hue), 100%, 75%);
     --body-color: hsl(0, 0%, 10%);
 
     --header-height: 4rem;
