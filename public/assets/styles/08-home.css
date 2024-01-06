@@ -83,7 +83,7 @@
 
     /* Alinha as duas setas no centro da página */
     position: absolute;
-    bottom: 2.5rem;
+    bottom: 4.5rem;
     left: 50%;
     transform: translateX(-50%);
 
@@ -96,7 +96,7 @@
 .go-to-next-section.show {
     opacity: 1;
     visibility: visible;
-    bottom: 1rem;
+    bottom: 2.5rem;
 }
 
 /* Efeito Zoom On */
