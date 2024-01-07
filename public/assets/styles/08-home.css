@@ -20,20 +20,20 @@
 
 #home .text {
     width: 100%;
-    height: 3rem;
+    /* height: 3rem; */
     text-align: center;
     letter-spacing: normal;
     font-weight: normal;
 }
 
 #home .text > *{
-    font-size: 1rem;
+    /* font-size: 1rem; */
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease .7s;
 }
 
-#home .text > *:not(.loading-msg).show {
+#home *:not(.loading-msg).show {
     opacity: 1;
     visibility: visible;
 }
@@ -57,14 +57,24 @@
 }
 
 #home .my-name {
-    font-weight: 400;
-}
-
-#home .my-name span{
     font-size: 1.5rem;
     font-weight: 500;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
+    margin: 1.5rem 0 0 0;
+}
+
+#home .my-name small{
+    font-weight: 400;
+    font-size: .8rem;
     display: block;
+}
+
+#home .button{
+    margin-top: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease .7s;
+    box-shadow: 0px 15px 20px rgba(0,0,0, 0.7);
 }
 
 .go-to-next-section {
@@ -125,20 +135,85 @@
         height: 75vh;
     }
 
-    #home .text > *{
-        font-size: 2rem;
+    #home .slogan{
+        font-size: 1.5rem;
     }
 
     #home .welcome-msg {
         font-size: 2.5rem;
     }
 
-    #home .my-name span{
+    #home .my-name{
         font-size: 3rem;
+    }
+
+    #home .my-name small{
+        font-size: 1.5rem;
+    }
+
+    #home .loading-msg {
+        font-size: 2rem;
+    }
+
+    #home .button{
+        margin-top: 5rem;
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 1.5rem;
+        padding: 2rem 1rem;
+    }
+
+    #home .button i[class*='icon'] {
+        font-size: 2rem;
     }
 }
 
 @media (min-width: 992px) {
+    #home {
+        min-height: 30rem;
+    }
+
+    #home .container {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    #home .image {
+        /* Começa na linha 1, coluna 2, expande 2 linhas e 1 colunas */
+        grid-area: 1 / 2 / span 2 / span 1;
+    }
+
+    #home .text {
+        /* Começa na linha 1, coluna 1 e não expande */
+        grid-area: 1 / 1;
+        text-align: left;
+        height: auto;
+    }
+
+    #home .text .slogan {
+        font-size: 1.5rem;
+    }
+
+    #home .text .loading-msg {
+        text-align: right;
+    }
+
+    #home .button {
+        width: 50%;
+        padding: 1rem .5rem;
+        font-size: 1rem;
+        margin: auto auto auto 0;
+        /* Começa na linha 2, coluna 1 e não expande */
+        grid-area: 2 / 1;
+    }
+
+    #home .button i[class*='icon'] {
+        font-size: 1.5rem;
+    }
+
     .go-to-next-section {
         display: none;
     }

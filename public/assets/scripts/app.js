@@ -22,6 +22,10 @@ window.onload = (event) => {
         goToNextSection();
         activeMenuAtCurrentSection();
     };
+
+    window.onresize = () => {
+
+    }
 }
 
 /**
@@ -97,6 +101,7 @@ function showInterface() {
     const goToNextSectionBtn = document.querySelector('.go-to-next-section');
 
     loadingMsg.style.display = 'none';
+
     welcomeMsg.classList.add('show');
     header.classList.add('show');
     goToNextSectionBtn.classList.add('show');
@@ -105,32 +110,32 @@ function showInterface() {
     for (const section of sections) {
         section.classList.add('show');
     }
-            
+
     // Exibe uma mensagem antes do nome na home page
     showSlogan();
+    // Exibe meu nome na home page
+    showMyName();
 }
 
 function showSlogan() {
-    const welcomeMsg = document.querySelector('#home .text .welcome-msg');
+    // const welcomeMsg = document.querySelector('#home .text .welcome-msg');
     const slogan = document.querySelector('#home .text .slogan');
 
-    setTimeout(() => {
-        welcomeMsg.style.display = 'none';
+    // setTimeout(() => {
         slogan.classList.add('show');
 
-        // Exibe meu nome na home page
-        showMyName();
-    }, 2000);
+
+    // }, 2000);
 }
 
 function showMyName() {
-    const slogan = document.querySelector('#home .text .slogan');
     const myName = document.querySelector('#home .text .my-name');
+    const buttonOnHome = document.querySelector('#home .button');
 
-    setTimeout(() => {
-        slogan.style.display = 'none';
+    // setTimeout(() => {
         myName.classList.add('show');
-    }, 4000);
+        buttonOnHome.classList.add('show');
+    // }, 4000);
 }
 
 /**

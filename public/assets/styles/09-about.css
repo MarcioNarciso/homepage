@@ -55,10 +55,12 @@
     }
 
     #about .social-media-wrapper.grid .logo {
+        /* Começa na linha 1, coluna 1, expande 2 linhas e 1 coluna*/
         grid-area: 1 / 1 / span 2 / span 1;
     }
 
     #about .social-media-wrapper.grid .button {
+        /* Começa na linha 2, coluna 2 */
         grid-area: 2 / 2;
         width: 70%;
         height: fit-content;
