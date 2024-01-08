@@ -71,6 +71,9 @@
 
 #home .button{
     margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 25rem;
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease .7s;
@@ -118,7 +121,7 @@
     pointer-events: none;
 }
 
-/* Estiliza as setas */
+/* Estiliza as duas setas */
 
 .go-to-next-section :first-child {
     font-size: 2.5rem;
@@ -130,9 +133,16 @@
     transform: translateY(-25%);
 }
 
-@media (min-width: 768px) {
+@media (min-height: 300px) and (min-width: 600px) {
     #home {
-        height: 75vh;
+        min-height: 50rem;
+    }
+}
+
+@media (min-width: 720px) and (min-height: 500px) {
+    #home {
+        height: 80vh;
+        min-height: auto;
     }
 
     #home .slogan{
@@ -156,12 +166,11 @@
     }
 
     #home .button{
-        margin-top: 5rem;
+        margin-top: 4rem;
         width: 60%;
         margin-right: auto;
         margin-left: auto;
-        font-size: 1.5rem;
-        padding: 2rem 1rem;
+        padding: 1rem .5rem;
     }
 
     #home .button i[class*='icon'] {
@@ -170,10 +179,6 @@
 }
 
 @media (min-width: 992px) {
-    #home {
-        min-height: 30rem;
-    }
-
     #home .container {
         display: grid;
         grid-auto-flow: row;
