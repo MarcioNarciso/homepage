@@ -9,15 +9,10 @@
 
     <link rel="icon" type="image/svg+xml" href="public/assets/images/minha-logo.svg">
 
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Icones -->
-    <link rel="stylesheet" href="public/assets/icons/style.css">
-
-    <link rel="stylesheet" href="public/assets/styles/01-reset.css">
-    <link rel="stylesheet" href="public/assets/styles/02-variables.css">
-    <link rel="stylesheet" href="public/assets/styles/03-debug.css">
+    <link rel="stylesheet" href="public/assets/styles/00-reset.css">
+    <link rel="stylesheet" href="public/assets/styles/01-variables.css">
+    <link rel="stylesheet" href="public/assets/styles/02-debug.css">
+    <link rel="stylesheet" href="public/assets/styles/03-loading.css">
     <link rel="stylesheet" href="public/assets/styles/04-util.css">
     <link rel="stylesheet" href="public/assets/styles/05-base.css">
     <link rel="stylesheet" href="public/assets/styles/06-layout.css">
@@ -27,11 +22,21 @@
     <link rel="stylesheet" href="public/assets/styles/10-skills.css">
     <link rel="stylesheet" href="public/assets/styles/11-contact.css">
     <link rel="stylesheet" href="public/assets/styles/12-footer.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="public/assets/icons/style.css">
 </head>
 
-<body>
+<body style="overflow: hidden;">
 
-    <main>
+    <div class="loading-msg">
+        <span>Carregando...</span>
+    </div>
+
+    <main style="opacity: 0; visibility: hidden;">
         <!-- Home -->
         <section id="home" class="section">
             <div class="container">
@@ -45,7 +50,6 @@
                         Márcio Narciso Dutra
                         <small>Desenvolvedor de Softwares</small>
                     </h1>
-                    <p class="loading-msg">Carregando...</p>
                 </div>
                 <a href="public/assets/cv/curriculum-marcio-narciso-dutra.pdf" class="button" target="_blank">
                     <span>
@@ -341,11 +345,10 @@
         </section>
 
         <div class="divider"></div>
-
     </main>
 
     <!-- Page Header -->
-    <header id="header" class="">
+    <header id="header" style="opacity: 0; visibility: hidden;">
         <nav class="container">
             <div class="my-logo">
                 <a href="#">
@@ -375,7 +378,7 @@
     </header>
 
     <!-- Page Footer -->
-    <footer class="section">
+    <footer class="section" style="opacity: 0; visibility: hidden;">
         <div class="container grid">
             <div class="my-logo">
                 <a href="#home">

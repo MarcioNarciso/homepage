@@ -1,0 +1,39 @@
+.loading-msg {   
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-out;
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.loading-msg.hide { 
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-msg span {
+    letter-spacing: .5rem;
+    animation: piscar 1.5s linear infinite;
+    font-weight: 500;
+}
+
+@keyframes piscar {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .loading-msg span {
+        font-size: 1.5rem;
+    }
+}

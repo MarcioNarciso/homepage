@@ -17,12 +17,18 @@ body {
 
     color: var(--text-color);
     font-family: var(--body-font);
-
-    overflow: hidden;
 }
 
 main {
     width: 100%;
+
+    transition: opacity 1s ease .7s;
+}
+
+/* Efeito fadeIn ao carregar a página */
+main.show {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* Estilizando links */

@@ -26,32 +26,6 @@
     font-weight: normal;
 }
 
-#home .text > *{
-    /* font-size: 1rem; */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease .7s;
-}
-
-#home *:not(.loading-msg).show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#home .text .loading-msg {   
-    opacity: 1;
-    visibility: visible;
-    letter-spacing: .5rem;
-    animation: piscar 1.5s linear infinite;
-    font-weight: 500;
-}
-
-@keyframes piscar {
-    50% {
-        opacity: 0;
-    }
-}
-
 #home .welcome-msg {
     font-size: 1.5rem;
 }
@@ -74,9 +48,6 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 25rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease .7s;
     box-shadow: 0px 15px 20px rgba(0,0,0, 0.7);
 }
 
@@ -101,8 +72,8 @@
     transform: translateX(-50%);
 
     /* Efeito FadeIn */
-    opacity: 0;
-    visibility: hidden; /* Remove eventos de mouse */
+    /* opacity: 0; */
+    /* visibility: hidden; */ /* Remove eventos de mouse */
     transition: bottom 1s ease .7s, opacity 1s ease .7s;
 }
 

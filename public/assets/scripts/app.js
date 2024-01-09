@@ -93,49 +93,19 @@ function initSkillsCards() {
 }
 
 function showInterface() {
-    const loadingMsg = document.querySelector('#home .text .loading-msg');
-    const welcomeMsg = document.querySelector('#home .text .welcome-msg');
+    const loadingMsg = document.querySelector('.loading-msg');
     const body = document.querySelector('body');
-    const header = document.querySelector('#header');
-    const sections = document.querySelectorAll('.section:not(#home)');
+    const contents = body.querySelectorAll("main, #header, footer");
     const goToNextSectionBtn = document.querySelector('.go-to-next-section');
 
     loadingMsg.style.display = 'none';
 
-    welcomeMsg.classList.add('show');
-    header.classList.add('show');
-    goToNextSectionBtn.classList.add('show');
-    body.style.overflow = 'auto';
-
-    for (const section of sections) {
+    for (const section of contents) {
         section.classList.add('show');
     }
 
-    // Exibe uma mensagem antes do nome na home page
-    showSlogan();
-    // Exibe meu nome na home page
-    showMyName();
-}
-
-function showSlogan() {
-    // const welcomeMsg = document.querySelector('#home .text .welcome-msg');
-    const slogan = document.querySelector('#home .text .slogan');
-
-    // setTimeout(() => {
-        slogan.classList.add('show');
-
-
-    // }, 2000);
-}
-
-function showMyName() {
-    const myName = document.querySelector('#home .text .my-name');
-    const buttonOnHome = document.querySelector('#home .button');
-
-    // setTimeout(() => {
-        myName.classList.add('show');
-        buttonOnHome.classList.add('show');
-    // }, 4000);
+    body.style.overflow = 'auto';
+    goToNextSectionBtn.classList.add('show');
 }
 
 /**

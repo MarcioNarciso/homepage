@@ -6,13 +6,15 @@
     left: 0;
     background: var(--body-color);
     box-shadow: 0 10px 20px black;
-    opacity: 0;
     z-index: 20;
+
+    transition: opacity 1s ease .7s;
 }
 
+/* Efeito fadeIn ao carregar a página */
 #header.show {
-    opacity: 1;
-    transition: opacity 1s ease .7s;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 #header nav {

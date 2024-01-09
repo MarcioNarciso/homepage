@@ -1,5 +1,13 @@
 footer {
     font-size: .8rem;
+
+    transition: opacity 1s ease .7s;
+}
+
+/* Efeito fadeIn ao carregar a página */
+footer.show {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 footer.section {
