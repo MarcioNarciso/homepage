@@ -35,11 +35,11 @@ body {
 
 ::-webkit-scrollbar-track {
     background: var(--base-color);
-    visibility: hidden;
+    visibility: visible;
 }
 
 ::-webkit-scrollbar-track:hover {
-    visibility: visible;
+    visibility: hidden;
 }
 
 /* Manipulador */
