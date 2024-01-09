@@ -4,14 +4,6 @@
 
 .section:not(#home) {
     background-color: var(--body-color);
-    opacity: 0;
-    display: none;
-}
-
-.section:not(#home).show {
-    opacity: 1;
-    display: block;
-    transition: opacity 1s ease .7s;
 }
 
 .section .title {
