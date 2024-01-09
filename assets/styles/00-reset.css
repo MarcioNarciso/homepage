@@ -19,3 +19,37 @@ img {
     width: 100%;
     height: auto;
 }
+
+/*
+  Estilizando a barra de rolagem.
+*/
+body {
+    overflow-y: scroll !important;
+    scrollbar-color : var(--body-color) var(--base-color);
+    scrollbar-width : thin;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--base-color);
+    visibility: hidden;
+}
+
+::-webkit-scrollbar-track:hover {
+    visibility: visible;
+}
+
+/* Manipulador */
+::-webkit-scrollbar-thumb {
+    background: var(--body-color);
+    border-radius: 10px;
+}
+
+/* Hover no manipulador */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--base-color-alt);
+    padding: 2px;
+}
