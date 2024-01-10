@@ -167,3 +167,36 @@ a:hover {
 }
 
 /* ### FIM - Estilizando efeito de flip ### */
+
+/* ### Efeito FadeInOut ### */
+.fade-effect {
+    transition: opacity .5s linear .25s;
+    -webkit-transition: opacity .5s linear .25s;
+    -moz-transition: opacity .5s linear .25s;
+    visibility: hidden;
+    opacity: 0;
+    will-change: opacity;
+}
+
+.fade-effect.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+/* ### FIM - Efeito FadeInOut ### */
+
+/* ### Efeito de Deslocamento ### */
+.translation-effect {
+    transform: translateY(10rem);
+    transition: transform .5s ease-out .7s;
+}
+
+.translation-effect.is-visible {
+    transform: translateY(0);
+}
+
+/* ### FIM - Efeito FadeInOut ### */
+
+.translation-effect.fade-effect {
+    transition: opacity .5s linear,
+                transform .5s;
+}

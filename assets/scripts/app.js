@@ -2,7 +2,7 @@ window.onload = (event) => {
     /**
      * Exibe todas seções quando a página está totalmente carregada.
      */
-    showInterface();
+    setTimeout(showInterface, 500);
 
     /**
      * Fechamento do menu mobile ao clicar nos menus.
@@ -26,6 +26,11 @@ window.onload = (event) => {
     window.onresize = () => {
 
     }
+
+    // Elementos que receberão animação quando a página for rolada
+    const contents = document.querySelectorAll("main section[id]:not(#home) .container, footer .container");
+    const loop = animateElementsOnScroll(contents, 'is-visible');
+    loop();
 }
 
 /**
@@ -97,6 +102,7 @@ function showInterface() {
     const body = document.querySelector('body');
     const contents = body.querySelectorAll("main, #header, footer");
     const goToNextSectionBtn = document.querySelector('.go-to-next-section');
+    const mainSectionContainer = body.querySelector("main #home .container");
 
     loadingMsg.style.display = 'none';
 
@@ -106,10 +112,13 @@ function showInterface() {
 
     body.style.overflow = 'auto';
     goToNextSectionBtn.classList.add('show');
+    mainSectionContainer.classList.add('is-visible');
 }
 
 /**
  * Ativa o menu conforme a seção visível na página.
+ * É traçada uma linha imaginária no meio da tela e verifica qual seção está em
+ * cima dessa linha no momento.
  */
 function activeMenuAtCurrentSection() {
     const sections = document.querySelectorAll("main section[id]");
