@@ -36,7 +36,11 @@ function isElementInViewport(el) {
     );
 }
 
-function animateElementsOnScroll(elmnts, cssClass) {
+/**
+ * Atribuir a função à "window" é um "hackzinho" para o Vite (esbuild) não 
+ * "perder a referência" à esta função que é invocada em outro arquivo.
+ */
+window.animateElementsOnScroll = function (elmnts, cssClass) {
     function loop() {
         elmnts.forEach(el => {
             if (isElementInViewport(el)) {
