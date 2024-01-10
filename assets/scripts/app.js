@@ -28,7 +28,7 @@ window.onload = (event) => {
     }
 
     // Elementos que receberão animação quando a página for rolada
-    const contents = document.querySelectorAll("main section[id]:not(#home) .container, footer .container");
+    const contents = document.querySelectorAll("main section[id]:not(#home) .container");
     const loop = animateElementsOnScroll(contents, 'is-visible');
     loop();
 }
