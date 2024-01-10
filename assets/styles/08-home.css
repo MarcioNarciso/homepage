@@ -74,7 +74,7 @@
     /* Efeito FadeIn */
     /* opacity: 0; */
     /* visibility: hidden; */ /* Remove eventos de mouse */
-    transition: bottom 1s ease .7s, opacity 1s ease .7s;
+    transition: bottom .5s ease-in .7s, opacity 1s ease .7s;
 }
 
 .go-to-next-section.show {
